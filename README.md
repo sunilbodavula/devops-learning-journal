@@ -54,3 +54,26 @@ A process is a running instance of a program.
 A running application is managed by the operating system
 as one or more processes. Process inspection helps us
 investigate application behavior.
+
+## Day 3: CPU and Memory Monitoring
+
+### Concepts learned
+- CPU executes program instructions.
+- Memory holds data used by running applications.
+- Node.js provides process.memoryUsage().
+- heapUsed measures JavaScript heap memory in use.
+- rss reports resident memory occupied by the process.
+- PowerShell Get-Process provides process information.
+- CPU in Get-Process represents cumulative CPU time in seconds.
+
+### Practical work
+- Created a Node.js resource-monitoring program.
+- Observed memory usage over time.
+- Retrieved the process ID.
+- Inspected the same process using PowerShell.
+- Compared Node.js memory readings with Windows process information.
+
+### Key takeaway
+Resource measurements help investigate application performance,
+but individual readings do not necessarily identify the root cause
+of a performance problem.
