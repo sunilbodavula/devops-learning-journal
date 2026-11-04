@@ -55,7 +55,7 @@ A running application is managed by the operating system
 as one or more processes. Process inspection helps us
 investigate application behavior.
 
-## Day 3: CPU and Memory Monitoring
+## Day 2.2: CPU and Memory Monitoring
 
 ### Concepts learned
 - CPU executes program instructions.
@@ -77,3 +77,35 @@ investigate application behavior.
 Resource measurements help investigate application performance,
 but individual readings do not necessarily identify the root cause
 of a performance problem.
+
+## Day 3: Networking Fundamentals
+
+### What is networking?
+Networking allows computers and devices to communicate and exchange information.
+
+### What is an IP address?
+An IP address identifies a network interface for communication using the Internet Protocol.
+
+Example: `192.168.1.10`
+
+### What is localhost?
+Localhost refers to the computer making the request.
+
+Common loopback addresses:
+- IPv4: `127.0.0.1`
+- IPv6: `::1`
+
+### Practical exercises
+- Used `ipconfig` to inspect network configuration.
+- Identified the computer's IPv4 address.
+- Used `ping 127.0.0.1` to test loopback communication.
+- Used `ping localhost` to observe hostname resolution.
+
+### Key takeaways
+- IP addresses help identify network interfaces.
+- Localhost refers to the current computer.
+- Different devices have their own localhost.
+- Ping uses ICMP and does not verify HTTP application health.
+
+### What I learned
+I understood how computers identify themselves for network communication and how localhost allows an application to communicate with the same computer.
