@@ -109,3 +109,41 @@ Common loopback addresses:
 
 ### What I learned
 I understood how computers identify themselves for network communication and how localhost allows an application to communicate with the same computer.
+
+## Day 4: Ports and Client-Server Communication
+
+### What is a port?
+A port is a logical communication endpoint identified by
+a number. It helps the operating system deliver network
+traffic to the appropriate application endpoint.
+
+### Common ports
+- 80: HTTP
+- 443: HTTPS
+- 3000: Common Node.js development port
+- 5432: PostgreSQL
+- 6379: Redis
+- 8080: Common Spring Boot development port
+
+### Client-server communication
+A client sends an HTTP request to a server.
+The server processes the request and sends an HTTP response.
+
+### What happens with app.listen(3000)?
+It starts the HTTP server listening on port 3000.
+
+### Practical exercises
+- Created an HTTP server using Node.js built-in HTTP module.
+- Started the server on 127.0.0.1:3100.
+- Sent an HTTP request using Invoke-RestMethod.
+- Inspected the listening port using Get-NetTCPConnection.
+- Identified the process using its PID.
+- Tested TCP connectivity using Test-NetConnection.
+- Stopped the server and verified that the port was no longer listening.
+
+### Key takeaways
+- IP addresses identify network interfaces.
+- Ports identify communication endpoints.
+- Multiple applications can use different ports on the same computer.
+- A running process does not necessarily mean a port is listening.
+- TCP connectivity and HTTP application health are different checks.
