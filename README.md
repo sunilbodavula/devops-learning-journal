@@ -134,7 +134,7 @@ It starts the HTTP server listening on port 3000.
 
 ### Practical exercises
 - Created an HTTP server using Node.js built-in HTTP module.
-- Started the server on 127.0.0.1:3100.
+- Started the server on 127.0.0.1:3200.
 - Sent an HTTP request using Invoke-RestMethod.
 - Inspected the listening port using Get-NetTCPConnection.
 - Identified the process using its PID.
@@ -147,3 +147,44 @@ It starts the HTTP server listening on port 3000.
 - Multiple applications can use different ports on the same computer.
 - A running process does not necessarily mean a port is listening.
 - TCP connectivity and HTTP application health are different checks.
+
+## Day 5: TCP and UDP
+
+### What is TCP?
+TCP stands for Transmission Control Protocol.
+
+TCP is a connection-oriented transport protocol that
+provides reliable and ordered delivery of data.
+
+### TCP three-way handshake
+1. SYN
+2. SYN-ACK
+3. ACK
+
+### What is UDP?
+UDP stands for User Datagram Protocol.
+
+UDP is a connectionless transport protocol.
+It does not guarantee delivery or ordering of datagrams.
+
+### TCP vs UDP
+- TCP provides reliable, ordered delivery.
+- UDP does not guarantee delivery or ordering.
+- TCP establishes a connection using a handshake.
+- UDP sends datagrams without a TCP-style handshake.
+
+### Practical exercises
+- Tested TCP connectivity using Test-NetConnection.
+- Sent an HTTP request using Invoke-WebRequest.
+- Created a UDP server using Node.js dgram.
+- Created a UDP client using Node.js dgram.
+- Sent a UDP datagram to the server.
+- Inspected the UDP endpoint using Get-NetUDPEndpoint.
+
+### Key takeaways
+- TCP and UDP are transport-layer protocols.
+- HTTP/1.1 and HTTP/2 commonly use TCP.
+- HTTPS uses TLS to protect HTTP communication.
+- HTTP/3 uses QUIC over UDP.
+- TCP connectivity and successful application responses
+  are different things.
