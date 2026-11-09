@@ -198,3 +198,13 @@ It does not guarantee delivery or ordering of datagrams.
 - Understood HTTPS and the role of TLS.
 - Tested TCP connectivity on port 443.
 - Sent an HTTPS request using Invoke-WebRequest.
+
+## Day 7 — DNS and Domain Names
+
+- Learned why DNS is required.
+- Understood the DNS resolution process.
+- Learned DNS record types: A, AAAA, CNAME, MX and TXT.
+- Practiced DNS queries using nslookup.
+- Used Resolve-DnsName in PowerShell.
+- Inspected and cleared the Windows DNS cache.
+- Understood the difference between DNS resolution, TCP connectivity and HTTP communication.
