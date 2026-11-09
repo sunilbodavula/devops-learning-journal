@@ -188,3 +188,13 @@ It does not guarantee delivery or ordering of datagrams.
 - HTTP/3 uses QUIC over UDP.
 - TCP connectivity and successful application responses
   are different things.
+
+  ## Day 6 — HTTP and HTTPS
+
+- Learned HTTP request and response structure.
+- Understood HTTP methods: GET, POST, PUT, PATCH and DELETE.
+- Learned common HTTP status codes.
+- Inspected HTTP status codes, headers and response bodies using PowerShell.
+- Understood HTTPS and the role of TLS.
+- Tested TCP connectivity on port 443.
+- Sent an HTTPS request using Invoke-WebRequest.
