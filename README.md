@@ -208,3 +208,15 @@ It does not guarantee delivery or ordering of datagrams.
 - Used Resolve-DnsName in PowerShell.
 - Inspected and cleared the Windows DNS cache.
 - Understood the difference between DNS resolution, TCP connectivity and HTTP communication.
+
+## Day 8 — Firewalls, Ports and Network Security
+
+- Learned inbound and outbound network traffic.
+- Understood firewall rules and their purpose.
+- Inspected listening TCP ports using PowerShell.
+- Identified processes associated with listening ports.
+- Tested TCP connectivity.
+- Understood 127.0.0.1 versus 0.0.0.0.
+- Inspected Windows Defender Firewall profiles and rules.
+- Learned AWS Security Group fundamentals.
+- Understood the principle of least privilege.
