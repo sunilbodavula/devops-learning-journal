@@ -220,3 +220,32 @@ It does not guarantee delivery or ordering of datagrams.
 - Inspected Windows Defender Firewall profiles and rules.
 - Learned AWS Security Group fundamentals.
 - Understood the principle of least privilege.
+## Day 9 — Reverse Proxy and Load Balancing
+
+### Concepts learned
+- Understood what a reverse proxy does.
+- Learned how a load balancer distributes requests across backend servers.
+- Understood Nginx as both a reverse proxy and a load balancer.
+- Learned upstream server configuration in Nginx.
+- Understood round-robin load balancing.
+- Learned how Docker Compose service names allow containers to communicate.
+- Understood why backend services do not need to expose their ports to the host.
+
+### Practical implementation
+- Created two independent Node.js backend instances.
+- Created a Dockerfile to containerize the Node.js application.
+- Configured Docker Compose to run both backend instances.
+- Configured Nginx as a reverse proxy.
+- Configured an upstream group containing both backend instances.
+- Exposed Nginx through host port 8080.
+- Sent multiple HTTP requests through Nginx.
+- Verified that requests were distributed between node-1 and node-2.
+- Stopped one backend instance and verified that the application remained accessible through the other instance.
+- Restarted the stopped backend and verified that both instances were serving requests again.
+
+### Key takeaways
+- A reverse proxy receives client requests and forwards them to backend servers.
+- A load balancer distributes incoming requests across multiple backend instances.
+- Nginx uses round-robin distribution by default for this upstream configuration.
+- Docker Compose provides internal networking between services.
+- Running multiple backend instances improves application availability and provides opportunities for horizontal scaling.
