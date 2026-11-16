@@ -249,3 +249,35 @@ It does not guarantee delivery or ordering of datagrams.
 - Nginx uses round-robin distribution by default for this upstream configuration.
 - Docker Compose provides internal networking between services.
 - Running multiple backend instances improves application availability and provides opportunities for horizontal scaling.
+
+### Day 10 – Docker Fundamentals: Images and Containers
+
+**Topics Covered:**
+- Understood the difference between Docker images and containers.
+- Learned that Docker images act as templates for creating containers.
+- Understood that multiple containers can be created from a single image.
+- Learned that each container has its own independent lifecycle.
+- Explored the difference between `docker ps` and `docker ps -a`.
+- Inspected locally available Docker images using `docker images`.
+- Reviewed running and stopped containers on the local machine.
+- Understood container port mapping and host port mapping.
+- Learned that containers have separate writable filesystems and independent default database storage.
+- Discussed why Docker volumes are important for database data persistence.
+
+**Practical Inspection:**
+- Executed `docker images`.
+- Executed `docker ps`.
+- Executed `docker ps -a`.
+- Identified running PostgreSQL, Nginx, and application containers.
+- Compared the two PostgreSQL containers using the same `postgres:16-alpine` image.
+
+**Key Learning:**
+A Docker image is a reusable template, while a container is an independent instance created from that image. By default, separate containers do not share their writable data.
+
+**Next Session:**
+- Hands-on Docker container creation.
+- Understanding Docker volumes.
+- Persisting PostgreSQL data using Docker volumes.
+- Testing data persistence after container removal and recreation.
+
+**Status:** Completed
