@@ -281,3 +281,35 @@ A Docker image is a reusable template, while a container is an independent insta
 - Testing data persistence after container removal and recreation.
 
 **Status:** Completed
+
+
+## Day 10 – Docker Images, Containers, and Volumes
+
+### Topics Covered
+- Difference between Docker images and containers.
+- Understanding container lifecycle: running and stopped containers.
+- Inspecting images and containers using `docker images`, `docker ps`, and `docker ps -a`.
+- Understanding container port mapping.
+- Understanding why container data is not automatically persistent.
+- Introduction to Docker named volumes.
+- Difference between removing a container and removing a volume.
+
+### Practical Exercises
+- Created a named Docker volume: `day10-postgres-data`.
+- Created a PostgreSQL container using the named volume.
+- Created an `employees` table and inserted sample records.
+- Stopped and removed the PostgreSQL container.
+- Recreated the container using the same named volume.
+- Verified that the employee records remained available.
+
+### Key Learnings
+- A Docker image is a reusable template for creating containers.
+- A container is an isolated instance created from an image.
+- Named volumes help preserve data independently of container lifecycles.
+- Removing a container does not automatically remove its named volume.
+- Removing a volume deletes its stored data.
+- Docker volumes provide persistence but are not a replacement for database backups.
+
+### Status
+- Completed: Docker images, containers, and named volume persistence.
+- Next: Docker bind mounts – mounting Windows host directories into containers and observing live file changes.
