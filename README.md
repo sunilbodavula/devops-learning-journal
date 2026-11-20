@@ -313,3 +313,49 @@ A Docker image is a reusable template, while a container is an independent insta
 ### Status
 - Completed: Docker images, containers, and named volume persistence.
 - Next: Docker bind mounts – mounting Windows host directories into containers and observing live file changes.
+
+
+## Day 10 – Docker Bind Mounts
+
+### Topics Covered
+- Understanding Docker bind mounts.
+- Difference between named volumes and bind mounts.
+- Connecting Windows host directories to Docker containers.
+- Using read-only bind mounts.
+- Understanding live file updates without rebuilding Docker images.
+
+### Practical Implementation
+
+Created an Nginx container and mounted a local HTML directory into the container.
+
+**Host directory:**
+`examples/day-10/bind-mount-site`
+
+**Container directory:**
+`/usr/share/nginx/html`
+
+**Container configuration:**
+- Container name: `bind-mount-nginx`
+- Docker image: `nginx:latest`
+- Host port: `8089`
+- Container port: `80`
+- Mount type: Bind mount
+- Access mode: Read-only
+
+### Practical Tests
+
+1. Successfully started the Nginx container.
+2. Accessed the website using `http://localhost:8089`.
+3. Modified the HTML file on the Windows host.
+4. Verified updated content in the browser without rebuilding the image.
+5. Attempted to create a file inside the mounted directory from the container.
+6. Received the expected `Read-only file system` error.
+
+### Key Learnings
+
+- Bind mounts connect host directories to container directories.
+- Changes made on the host are reflected inside the container.
+- Read-only mounts protect host files from container-side modifications.
+- Bind mounts are useful during application development.
+
+**Status:** Completed
