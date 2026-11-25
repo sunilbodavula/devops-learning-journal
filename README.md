@@ -359,3 +359,50 @@ Created an Nginx container and mounted a local HTML directory into the container
 - Bind mounts are useful during application development.
 
 **Status:** Completed
+
+### Day 11 – Docker Networking
+
+**Topics Covered:**
+- Docker bridge networks.
+- Creating and inspecting a custom Docker network.
+- Connecting containers to the same network.
+- Container-to-container communication.
+- Understanding Docker DNS and container names.
+- Connecting to PostgreSQL from another container.
+
+**Hands-on Practice:**
+
+1. Created a custom Docker network named `day11-network`.
+2. Started a PostgreSQL 16 Alpine container named `day11-postgres`.
+3. Connected the PostgreSQL container to `day11-network`.
+4. Verified PostgreSQL readiness using `pg_isready`.
+5. Started a temporary PostgreSQL client container on the same network.
+6. Connected to PostgreSQL using the container name `day11-postgres`.
+7. Successfully executed:
+
+```sql
+SELECT current_database(), current_user;
+```
+
+**Expected Output:**
+
+```text
+ current_database | current_user
+------------------+--------------
+ appdb            | appuser
+(1 row)
+```
+
+**Key Learnings:**
+
+- Containers connected to the same custom bridge network can communicate with each other.
+- Docker provides DNS resolution for container names within a custom network.
+- We can connect to another container using its name instead of its IP address.
+- Inside a container, `localhost` refers to that same container.
+- Containers on the same Docker network can communicate using the destination container's internal port without publishing that port to the host.
+
+**Practical Application:**
+
+In a real-world application, a Node.js or Spring Boot backend container can connect to a PostgreSQL container using its container name and internal database port (`5432`).
+
+**Status:** Completed and tested successfully.
